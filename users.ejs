@@ -1,0 +1,105 @@
+</table>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- <h1>Admin Record</h1> -->
+                <th scope="col">id</th>
+                <th scope="col">Fname</th>
+                <th scope="col">lname</th>
+                <th scope="col">Email</th>
+                <th scope="col">mobile</th>
+                <th scope="col">pass</th>
+                <th scope="col">about</th>
+
+
+            </tr>
+        </thead>
+
+
+
+        <tbody>
+
+
+
+            <style>
+
+            </style>
+            <% data.forEach(function(row) { %>
+                <tr>
+
+
+
+                    <td class="table-active">
+                        <%= row.id %>
+                    </td>
+
+                    <td>
+                        <%= row.fname %>
+                    </td>
+                    <td>
+                        <%= row.lname %>
+                    </td>
+                    <td>
+                        <%= row.email %>
+                    </td>
+                    <td>
+                        <%= row.mobile %>
+                    </td>
+                    <td>
+                        <%= row.pass %>
+                    </td>
+
+                    <td>
+                        <%= row.about %>
+
+                    </td>
+                    <td>
+
+                        <a class="btn btn-success" onclick=" return confirm('Do you want Update?')"
+                            href="/update/<%= row.id %>">Update</a>
+                        <a class="btn btn-warning" onclick=" return confirm('Do you want Delete?')"
+                            href="/delete/?id= <%= row.id %>">delete</a>
+                    </td>
+
+                    </td>
+
+
+
+
+
+                </tr>
+                <% }); %>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
